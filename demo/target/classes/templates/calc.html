@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+<form action="/" method="get">
+    <input type="submit" value="На главную">
+</form>
+<form action="/calc" method="post">
+    <input type="number" name="num1" required placeholder="Первое число">
+    <select name="operation" required>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" name="num2" required placeholder="Второе число">
+    <button type="submit">Вычислить</button>
+</form>
+<div th:if="${result}">
+    <h2>Результат</h2>
+    <p>Результат: <span th:text="${result}"></span></p>
+</div>
+</body>
+</html>

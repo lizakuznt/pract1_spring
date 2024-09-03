@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converter</title>
+</head>
+<body>
+<h1>Конвертер валют</h1>
+<form action="/" method="get">
+  <input type="submit" value="На главную">
+</form>
+<form action="/convert" method="post">
+  <select name="num1">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="RUB">RUB</option>
+    <option value="BYN">BYN</option>
+  </select>
+  <input type="number" name="a" step="0.01" value="${a}">
+
+  <h2>=</h2>
+  <select name="num2">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="RUB">RUB</option>
+    <option value="BYN">BYN</option>
+  </select>
+  <h2 th:text="${b}"></h2>
+  <input type="submit" name="b" value="Конвертировать">
+</form>
+</body>
+</html>
